@@ -1,0 +1,33 @@
+#include <stdio.h>
+const int room=3;
+const int number=10;
+int main()
+{
+	int id[room][number];
+	char name[50][room][number];
+	char lastname[50][room][number];
+	
+	for (int i=0 ; i<room ; ++i)
+	{
+		for (int j = 0; j < number; ++j)
+		{
+			printf("room %d,number %d id: ",i + 1,j + 1);
+			scanf("%d", &id[i][j]);
+			printf("room %d,number %d Name : ",i + 1,j + 1);
+			scanf("%s", name[i][j]);
+			printf("room %d,number %d lastname: ",i + 1,j + 1);
+			scanf("%s", lastname[i][j]);
+		}
+	}
+	 printf("\nDisplaying values: \n\n");
+	 	
+		 for (int i=0 ; i<room ; ++i)
+		 {
+		 
+		 	for (int j = 0; j < number; ++j)
+			{ 
+		 	printf("room %d, number %d = %d %-10s %-10s \n", i + 1, j + 1, id[i][j],name[i][j],lastname[i][j]);
+		    }
+	     }
+	return(0);
+}
